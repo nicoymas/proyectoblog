@@ -1,0 +1,70 @@
+{% extends 'appblog/base.html' %}
+        
+{%block principal%}  
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESETAS</title>
+</head>
+<body>
+    <form action="/appblog/post/" method="POST">
+        {% csrf_token %}
+
+        <table>
+            
+            
+            {{ formulario.as_table }}    
+
+
+            
+        </table>
+        <input type="submit" value="crear post">
+
+    </form>
+
+    <div class="container mt-5">
+        <table class="table">
+    
+            <thead>
+                <tr>
+                    <th class="table-success">Titulo</th>
+                    <th class="table-success">Autor</th>
+                   
+                    
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for elemento in lista %}
+                    <tr>
+                    <td>{{elemento.titulo}}</td>
+                    <td>{{elemento.autor}}</td>
+                    <td>
+                        <a href="{% url 'eliminarpost' elemento.titulo %}" > Eliminar</a>       
+
+
+                    </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+    
+    
+        </table>
+    </div>
+    
+
+
+</body>
+</html>
+
+{%endblock%} 
+
+
+
+
+

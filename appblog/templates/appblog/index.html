@@ -1,0 +1,67 @@
+
+{% extends 'appblog/base.html' %}
+        
+{%block principal%}  
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="{% url 'reseta' %}">
+                            <h2 class="post-title">El Resetario</h2>
+                            <h3 class="post-subtitle">Donde se podran ir cargando resetas con sus componentes</h3>
+                        </a>
+                        <p class="post-meta">
+                            Sera posteado por los 
+                            <a href="{% url 'login_user' %}">usuarios</a>
+                            
+                        </p>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="{% url 'post' %}"><h2 class="post-title">Aqui puede compartir experienias</h2></a>
+                        <p class="post-meta">
+                            de 
+                            <a href="{% url 'login_user' %}">Usuarios</a>
+                            para usuarios
+                        </p>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="post.html">
+                            <h2 class="post-title">No presionar</h2>
+                            <h3 class="post-subtitle">peligro de derrumbe</h3>
+                        </a>
+                        <p class="post-meta">
+                            personal trabajando
+                            <a href="#!">"WARNING"</a>
+                            
+                        </p>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="{% url 'login_user' %}">
+                            <h2 class="post-title">Ustedes</h2>
+                            <h3 class="post-subtitle">y nosotros</h3>
+                        </a>
+                        <p class="post-meta">
+                            Por la
+                            <a href="{% url 'reseta' %}">Comida</a>
+                            on July 8, 2022
+                        </p>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Pager-->
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="{% url 'post' %}">Older Posts →</a></div>
+                </div>
+            </div>
+        </div>
+{%endblock%}  
