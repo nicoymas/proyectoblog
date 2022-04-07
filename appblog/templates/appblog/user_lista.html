@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista usuarios</title>
+</head>
+<body>
+    <h1> usuario </h1>
+    <ul>
+        {% for usuario in object_list %}
+            <li>
+                <p>nombre: {{usuario.nombre}}</p>
+                <p>
+                    
+                    
+                    <a href="{% url 'editar' usuario.email %}">editar</a>
+                    <a href="{% url 'borrar' usuario.email %}">borrar</a>
+                    <a href="{% url 'detalle' usuario.email %}">Crear</a>
+                    <a href="{% url 'create' usuario.nombre %}">Crear</a>
+                </p>
+            </li>
+
+        {% endfor %}
+
+
+
+    </ul>
+</body>
+</html>

@@ -8,6 +8,10 @@ from appblog.forms import *
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 
+#vistas basadas en clases
+from django.views.generic import ListView
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView,UpdateView,DeleteView
 
 
 def login_user(request):
@@ -166,7 +170,28 @@ def lasresetas (request):
 
 
 
+class Userlista(ListView):#model y template_mane siempre deben llamarse asi
+    model= Users_login
+    template_name="appblog/user_lista.html"
 
+#DetailView: nos permite ver detalles de un solo objeto  
+class Usuario_detalle(DetailView):
+    model= Users_login
+    template_name= "appblog/usuario_detalle.html"  
+    
+class Crear_usuario(CreateView):
+    model=Users_login
+    success_url="/formulario_login/" #esta es la pagina donde nos redirige
+    fields=["nombre" ,"email"] #aca se colocan los datos que creara
+
+class Update_user(UpdateView):#funciona muy parecido al create
+    model=Users_login
+    success_url= ""
+    fields=["nombre","email"]# se puede quitar uno para que no sea cambiado
+
+class Borrar_user(DeleteView):
+    model=Users_login
+    success_url= ""
 
 
 
