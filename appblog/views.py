@@ -63,7 +63,7 @@ def inicio(request):
     return render(request, "appblog/index.html") 
 
 
-@ login_required
+#@ login_required
 def reseta (request):
     
     if request.method =="POST":
@@ -104,7 +104,7 @@ def formulario_login (request):
     return render (request, "appblog/formulario_login.html",{"listado":lista_user})  
     
 
-@ login_required()
+#@ login_required()
 def buscar_usuarios (request): 
     usuario= request.GET.get('user', "")
     error = ""
@@ -121,7 +121,7 @@ def buscar_usuarios (request):
 
     return render(request, 'appblog/buscar_usuarios.html' , {"error": error})
 
-@ login_required
+#@ login_required
 def post_blog (request):
     list_post=Post.objects.all()
 
@@ -146,7 +146,7 @@ def post_blog (request):
     
     return render(request,"appblog/post_blog.html", {"formulario":posteos,"lista":list_post})      
 
-@ login_required()
+#@ login_required()
 def eliminarpost(request,elim):
     try:
         posts=Post.objects.get(titulo=elim)
@@ -188,12 +188,12 @@ def editar_post (request, titulo_id):
 
 
 
-@ login_required()
+#@ login_required()
 def buscar_post (request):
     pass
 
 
-@ login_required()
+#@ login_required()
 def lasresetas (request):
     pass
 
