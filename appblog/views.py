@@ -158,6 +158,36 @@ def eliminarpost(request,elim):
 
 
 
+def editar_post (request, titulo_id):
+    
+    posteo= Post.objects.get(titulo=titulo_id)
+    #formulario= post(initial={"titulo": posteo.titulo, "contenido": posteo.conten_post , "autor": posteo.autor})
+
+    if request.method == "POST":
+        
+        
+        formulario=post(request.POST)
+        print(formulario)
+        if formulario.is_valid():
+            informacion= formulario.cleaned_data
+            posteo.titulo=informacion ["titulo"] #ver asunto de primary_key en usuarios
+            posteo.conten_post=informacion["contenido"]
+            posteo.autor=informacion["autor"]
+
+            posteo.save()
+
+            return render (request ,"appblog/index.html")
+        
+
+
+    else:
+        formulario= post(initial={"titulo": posteo.titulo, "contenido": posteo.conten_post , "autor": posteo.autor})
+        
+        
+    return render(request ,"appblog/update_post.html", {"formulario":formulario , "titulo_id":titulo_id})
+
+
+
 @ login_required()
 def buscar_post (request):
     pass
