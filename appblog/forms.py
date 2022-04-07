@@ -1,4 +1,6 @@
 from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 class post (forms.Form):
     
@@ -20,4 +22,13 @@ class resetario (forms.Form):
 class Users (forms.Form):
     
     nombre=forms.CharField(max_length=40)
-    #email=forms.EmailField(max_length=40)    
+        
+
+class registrousuario (UserCreationForm): #todo esto tiene que ser tal cual porque sino no lo toma
+    email= forms.EmailField()
+    password1=forms.CharField( label="contraseña" , widget= forms.PasswordInput)
+    password2=forms.CharField( label="repetir contraseña" , widget= forms.PasswordInput)
+    class Meta:
+        model= User #este models fue importado de django
+        fields= ["username" , "email", "password1", "password2"]
+        help_text= {k:"" for k in fields}#este campo es opcional para quitar los mensajes
