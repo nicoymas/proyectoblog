@@ -4,7 +4,7 @@ Entrega final Nicolas Marin Viegas
 # proyectoblog
 proyecto de blog realizado en python y django
 
-se trata de un proyecto de blog y en el siguiente linck lo muestro en funcionamiento con sus funciones
+se trata de un proyecto de blog y en el siguiente linck lo muestro en funcionamiento 
 
 https://drive.google.com/file/d/1xJ9J7r3Xk_DvOJDHo_q2qciKhKhseQ8i/view?usp=sharing
 
