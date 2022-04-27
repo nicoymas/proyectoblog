@@ -1,12 +1,9 @@
 from django.contrib import admin
-from appblog.models import Reseta,Users_login,Post
+from appblog.models import Avatar
 
 
-admin.site.register ( Reseta )
+
    
 
-admin.site.register(Users_login)
    
-
-admin.site.register (Post) 
-    
+admin.site.register (Avatar)    

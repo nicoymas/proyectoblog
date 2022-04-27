@@ -1,7 +1,7 @@
-
 {% extends 'appblog/base.html' %}
         
-{%block principal%} 
+{%block principal%}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,23 +9,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <title>Editando post</title>
+    <title>Crear mensaje</title>
 </head>
 <body>
-    <form action="/update_post/{{titulo_id}}/" method="POST"> 
+    <form method="post" >
         {% csrf_token %}
-
-        <table>
-        {{ formulario.as_table }}    
-        </table>  
         
-        <input type="submit" value="editar">
-
-
-    </form>
-    
+        {{ form.as_p }}
+        <input type="submit" value="Cargar/Actualizar">
+        </form>
 </body>
 </html>
-{%endblock%} 
+{%endblock%}

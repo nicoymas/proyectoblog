@@ -12,14 +12,18 @@
         {% for usuario in object_list %}
             <li>
                 <p>nombre: {{usuario.nombre}}</p>
-                <p>
+                <p>email: {{usuario.email}}</p>
+                    
+                    <a href="{% url 'detalle' usuario.nombre %}">Crear</a>
+                    <a href="{% url 'editar' usuario.nombre %}">editar</a>
+                    <a href="{% url 'borrar' usuario.nombre %}">borrar</a>
+                    <a href="{% url 'detalle' usuario.nombre %}">Crear</a>
+
+                
                     
                     
-                    <a href="{% url 'editar' usuario.email %}">editar</a>
-                    <a href="{% url 'borrar' usuario.email %}">borrar</a>
-                    <a href="{% url 'detalle' usuario.email %}">Crear</a>
-                    <a href="{% url 'create' usuario.nombre %}">Crear</a>
-                </p>
+                    
+                
             </li>
 
         {% endfor %}

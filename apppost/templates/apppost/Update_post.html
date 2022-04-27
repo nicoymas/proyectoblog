@@ -1,6 +1,7 @@
+
 {% extends 'appblog/base.html' %}
         
-{%block principal%}
+{%block principal%} 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,23 +9,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login blog</title>
+
+
+    <title>Editando post</title>
 </head>
 <body>
-    
-    <div class="container mt-5 text-center">
-       
-
-        <form action="" method="POST">
+    <form action="/Update_post/{{titulo_id}}/" method="POST" enctype="multipart/form-data"> 
         {% csrf_token %}
-        {{form.as_p}}
 
-        <button type="submit"> Iniciar Sesion</button>
+        <table>
+        {{ form.as_p }}   
+        {{ form.media }}  
+        </table>  
         
-        </form>
-    </div>    
+        <input type="submit" value="editar">
 
+
+    </form>
     
 </body>
 </html>
-{%endblock%}
+{%endblock%} 

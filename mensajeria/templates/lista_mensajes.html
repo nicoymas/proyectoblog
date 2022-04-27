@@ -1,0 +1,77 @@
+{% extends 'appblog/base.html' %}
+        
+{%block principal%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'mensajeria' %}">
+        <h2 class="post-title">Enviar mensaje</h2>
+        
+    </a>
+  
+    <div class="container mt-5">
+        <table class="table">
+    
+            <thead>
+                <tr>
+                    <th class="table-success">mensaje de</th>
+                    <th class="table-success">asunto</th>
+                    
+                    
+                   
+                    
+                </tr>
+            </thead>
+        
+    
+            <tbody>
+                <h1 class="text-center mt-4">Mensajes </h1>
+               <ul>
+                   {% for mensaje in object_list %}
+                        {% if mensaje.receptor == request.user.username %}
+                       <tr>
+
+                           <td>{{mensaje.emisor}}</td>
+                           <td>{{mensaje.asunto}}</td>
+                           
+                        
+                        <td>
+                            <a href="{% url 'mensaje_detalles' mensaje.id %}">Ver</a>
+                           
+                         </td>   
+                        </tr>
+                        
+                        
+                        
+                        
+                        {%endif%}   
+
+                           
+                           
+                        
+                        
+                            
+                    
+                        
+                    {% endfor %}           
+               </ul>               
+
+
+            </tbody>
+       
+    
+        </table>
+    </div>
+  
+</body>
+</html>
+
+{%endblock%}

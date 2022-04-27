@@ -1,7 +1,6 @@
 {% extends 'appblog/base.html' %}
         
-{%block principal%}  
-
+{%block principal%}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,22 +8,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RESETAS</title>
+    <title>Formulario Post</title>
 </head>
 <body>
-    <form action="/post/" method="POST">
-        {% csrf_token %}
 
-        <table>
-            
-            
-            {{ formulario.as_table }}    
-
-
-            
-        </table>
-        <input type="submit" value="crear post">
-
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.media }}
+    {{ form.as_p }}
+    <input type="submit" value="Cargar/Actualizar">
     </form>
 
     <div class="container mt-5">
@@ -44,11 +36,7 @@
                     <tr>
                     <td>{{elemento.titulo}}</td>
                     <td>{{elemento.autor}}</td>
-                    <td>
-                        <a href="{% url 'eliminarpost' elemento.titulo %}" > Eliminar</a>       
-
-
-                    </td>
+                    
                     </tr>
                 {% endfor %}
             </tbody>
@@ -56,15 +44,8 @@
     
         </table>
     </div>
-    
-
 
 </body>
 </html>
-
 {%endblock%} 
-
-
-
-
 

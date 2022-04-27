@@ -1,0 +1,14 @@
+{% extends 'appblog/base.html' %}
+        
+{%block principal%}
+
+<body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Confirmar" class="btn btn-primary">
+    </form>
+    
+</body>
+
+{%endblock%}

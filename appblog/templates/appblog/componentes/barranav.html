@@ -5,14 +5,26 @@
             Menu
             <i class="fas fa-bars"></i>
         </button>
+      
+    
+        
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto py-4 py-lg-0">
                 
-                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'reseta' %}">CREAR RESETA</a></li>
-                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'post' %}">POSTEOS</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'post_lista' %}">Listado POST</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'Editarusuario' %}">edit user</a></li>
+                {% if request.superuser.is_authenticated %}
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'cargarimagen' %}">cargar/editar imagen</a>
+                {%endif%}
                 
-                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'login_user' %}">USUARIOS</a></li>
                 
+                {% if not request.user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'login' %}">Iniciar Sesion</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'register' %}">Registrate</a></li>
+                {% else %}
+                    <li class="nav-item"> <a class="nav-link px-lg-3 py-3 py-lg-4" href= "{% url 'logout' %}"> desconectar</a> </li>
+                    <p class="text-muted small mb-4"> <h2>{{request.user.username}} </h2></p>                
+                {% endif %}
             </ul>
         </div>
     </div>
