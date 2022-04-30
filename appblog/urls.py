@@ -18,12 +18,12 @@ urlpatterns = [
     path("", views.inicio, name='inicio' ),
     
     path("accounts/signup", views.register ,name= "register"),
-    path("logout",LogoutView.as_view (template_name="appblog/logout.html"), name= "logout"),
+    path("accounts/logout",LogoutView.as_view (template_name="appblog/logout.html"), name= "logout"),
     path("cargar_imagen/",cargar_imagen, name="cargarimagen"),
     
     path("accounts/profile/", actualizar_usuario ,name="Editarusuario"),
     
-    path("routeabout/" , views.sobre_mi , name = "sobremi"),
+    path("about/" , views.sobre_mi , name = "sobremi"),
 
     
  

@@ -37,6 +37,7 @@
                 <h1 class="text-center mt-4">Post </h1>
                <ul>
                    {% for post in object_list %}
+                        {% if post.autor == request.user.username %}
                        <tr>
 
                            <td>{{post.titulo}}</td>
@@ -51,6 +52,7 @@
                             </td>   
                     
                         </tr>
+                        {%endif%}
                     {% endfor %}           
                </ul>               
 

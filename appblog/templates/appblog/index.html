@@ -5,22 +5,23 @@
 
     
         
-{% if request.user.is_authenticated %}
+{% if request.user.is_superuser %}
     {% if imagen_url is None %}
-    <h5>pide un avatar a un administrador con nuestra mensajeria</h5>
-    <a href="{% url 'mensaje_lista' %}">"nombre del admin"</a>
+    <a href="{% url 'cargarimagen' %}">cargar avatar</a>
+    
     
 
     {%else%}
     <div class="container">
         <img src="{{ imagen_url }}" alt="imagen" width="10%">
+
     </div>
    
-    
+    <a href="{% url 'cargarimagen' %}">editar avatar</a>   
         
     {%endif%}    
-{% else %}
-        <h5>puedes pedir un avatar</h5>
+
+        
         
         
 {%endif%}

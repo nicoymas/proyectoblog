@@ -30,17 +30,17 @@ class Post_detalle(LoginRequiredMixin,DetailView):
     
 class Crear_Post(LoginRequiredMixin,CreateView):
     model=Post
-    success_url="/post/post/routepages/" 
+    success_url="/pages/" 
     fields=["titulo","subtitulo","imagen","conten_post","autor"] 
 
 class Update_post(LoginRequiredMixin,UpdateView):
     model=Post
-    success_url= "/post/post/routepages/"
+    success_url= "/pages/"
     fields=["titulo","subtitulo","imagen","conten_post","autor"]
 
 class Borrar_post(LoginRequiredMixin,DeleteView):
     model=Post
-    success_url= "/post/post/routepages/"
+    success_url= "/pages/"
 
 
 
