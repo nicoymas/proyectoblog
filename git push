@@ -1,0 +1,78 @@
+[33mcommit f7b39e4602f9272b1b49649811ce663b65e3fc8d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: nico viegas <nicolasmarinviegas@gmail.com>
+Date:   Sat Apr 30 18:22:05 2022 -0300
+
+    entrega
+
+[33mcommit f8be157b41d3f0123a8e186f3838b9565f1194dd[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: nico viegas <nicolasmarinviegas@gmail.com>
+Date:   Wed Apr 27 18:48:14 2022 -0300
+
+    entrega
+
+[33mcommit 2c7b2627c2b44da902e03ab3c54cecbcf5c392c8[m
+Author: nico viegas <nicolasmarinviegas@gmail.com>
+Date:   Thu Apr 7 16:25:21 2022 -0300
+
+    normalizando
+
+[33mcommit 42d059b5956853476a6d0cf7ec90d721373a4b80[m
+Author: nico viegas <nicolasmarinviegas@gmail.com>
+Date:   Thu Apr 7 15:00:25 2022 -0300
+
+    actualizando
+
+[33mcommit 9b5f801806f5ab8de186e5e146bbea6f66a71913[m
+Author: nico viegas <nicolasmarinviegas@gmail.com>
+Date:   Thu Apr 7 00:15:22 2022 -0300
+
+    copi
+
+[33mcommit 47996e70e436276731ff03ea26ec82d361ea73c8[m
+Merge: 864ecf9 d9f9fc9
+Author: nico viegas <nicolasmarinviegas@gmail.com>
+Date:   Thu Apr 7 00:01:13 2022 -0300
+
+    Merge branch 'main' of https://github.com/nicoymas/proyectoblog
+
+[33mcommit 864ecf97adde5143be17267ec2d1585a10698786[m
+Author: nico viegas <nicolasmarinviegas@gmail.com>
+Date:   Wed Apr 6 23:51:25 2022 -0300
+
+    actualizando
+
+[33mcommit d9f9fc967182269f3506ce022f3334d96936f99e[m
+Author: nicoymas <101991824+nicoymas@users.noreply.github.com>
+Date:   Wed Mar 30 20:24:31 2022 -0300
+
+    Update README.md
+
+[33mcommit 26b6c1f5ccf7aed0edf30eb750e9e71a5a1e20ba[m
+Author: nico viegas <nicolasmarinviegas@gmail.com>
+Date:   Wed Mar 30 20:11:39 2022 -0300
+
+    blog iniciado
+
+[33mcommit fb3f898ccdd444aac6b3bdb5fe768a73572e8ce3[m
+Author: nicoymas <101991824+nicoymas@users.noreply.github.com>
+Date:   Wed Mar 30 19:25:15 2022 -0300
+
+    Update README.md
+
+[33mcommit 0c82867a6e34c360043084b5a8b30e1ad4d91278[m
+Author: nicoymas <101991824+nicoymas@users.noreply.github.com>
+Date:   Wed Mar 30 19:24:09 2022 -0300
+
+    Update README.md
+
+[33mcommit 719964d4c03ec269c1d4bac577a138432a6b0e66[m
+Author: nicoymas <101991824+nicoymas@users.noreply.github.com>
+Date:   Wed Mar 30 19:23:21 2022 -0300
+
+    Update README.md
+
+[33mcommit f18def54712c936a1728a98890a7385950a40ddd[m
+Author: nicoymas <101991824+nicoymas@users.noreply.github.com>
+Date:   Wed Mar 30 19:17:05 2022 -0300
+
+    Initial commit

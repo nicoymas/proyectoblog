@@ -3,12 +3,19 @@
 {%block principal%}
 
 <body>
+    {% if request.user.is_superuser %}
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}}
         <input type="submit" value="Confirmar" class="btn btn-primary">
     </form>
+    {% else %}
+    <a class ="button" href="{% url 'inicio' %}">regresar al inicio</a>
+    {%endif%}
+
+    
     
 </body>
+
 
 {%endblock%}
